@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Platform YouTube Dev — プライバシーポリシー</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">最終更新日: 2026年10月27日</p>
+      <h1>プライバシーポリシー</h1>
+      <p>本ポリシーは、個人運用ツール「AI Platform YouTube Dev」によるGoogleユーザーデータの取扱いを説明します。</p>
+    </header>
+
+    <section>
+      <h2>1. 取得する情報</h2>
+      <ul>
+        <li>OAuth認可で発行されるauthorization code、access tokenおよびrefresh token。</li>
+        <li>認証中のYouTubeチャンネルID。</li>
+        <li>本ツールで投稿した動画のvideo ID、channel ID、公開範囲、アップロード・処理状態、タイトル、説明、category、子ども向け設定および合成コンテンツ申告。Google APIが値を返さない項目は取得できません。</li>
+        <li>所有者が投稿を許可した動画ファイルと、その生成元を識別するhash・version等のローカル制作記録。</li>
+      </ul>
+      <p>Googleアカウントのパスワードは取得しません。</p>
+    </section>
+
+    <section>
+      <h2>2. 利用目的</h2>
+      <ul>
+        <li>認証中のチャンネルが所有者指定の投稿先と一致することを確認するため。</li>
+        <li>所有者が承認した動画を、指定したmetadataとともに非公開でアップロードするため。</li>
+        <li>重複投稿を防ぎ、既知の動画IDの処理状態とmetadataを確認するため。</li>
+        <li>投稿操作の監査記録と障害時の安全な停止判断を保持するため。</li>
+      </ul>
+      <p>Googleユーザーデータを広告、販売、信用評価、または汎用AIモデルの学習には使用しません。</p>
+    </section>
+
+    <section>
+      <h2>3. 保存場所と保護</h2>
+      <p>refresh tokenを含むOAuth credentialは、所有者が管理する非公開サーバーの秘密情報専用領域に保存します。ファイルは所有者だけが読み書きできる権限、親ディレクトリは所有者だけが参照できる権限に制限します。access tokenは処理中のメモリだけで扱い、永続保存しません。</p>
+      <p>投稿request、操作event、YouTube応答およびstatus確認結果は、同サーバーの対象Project専用領域に保存します。credential本文、token、client secret、認証codeおよびupload session URLを通常ログやGitへ保存しない実装です。通信にはHTTPSを使用し、自動retryによる重複投稿を行いません。</p>
+    </section>
+
+    <section>
+      <h2>4. 第三者提供</h2>
+      <p>動画投稿と状態確認に必要な情報はGoogleおよびYouTubeへ送信します。それ以外の第三者へGoogleユーザーデータを販売または提供しません。法令に基づく有効な要求がある場合を除き、広告事業者やデータブローカーへ共有しません。</p>
+      <p>公開案内ページをGitHub Pagesで提供する場合、GitHubはセキュリティ目的で訪問者のIPアドレス等の標準的なアクセス情報を処理することがあります。本ページ自体はCookie、analytics、広告または入力フォームを使用しません。</p>
+    </section>
+
+    <section>
+      <h2>5. 保持と削除</h2>
+      <ul>
+        <li>OAuth credentialは、認可取消し、置換、または所有者による削除指示まで保持します。置換前credentialを障害復旧用の所有者限定backupとして保持する場合があります。</li>
+        <li>投稿requestと操作履歴は、監査と重複投稿防止のため自動削除期限を設けず保持します。</li>
+        <li>YouTube上の動画は、YouTube Studio上の所有者設定に従います。本ツールは動画を自動削除しません。</li>
+      </ul>
+      <p>ローカルcredentialまたは記録の削除を希望する場合は、下記連絡先へ依頼してください。削除は自動処理ではなく、対象と監査影響を確認したうえで所有者の指示により実施します。</p>
+    </section>
+
+    <section>
+      <h2>6. 認可の取消し</h2>
+      <p><a href="https://myaccount.google.com/permissions" rel="noopener noreferrer">Googleアカウントの接続済みアプリ管理画面</a>から、いつでも本アプリのアクセス権を取り消せます。取消し後は新しいaccess tokenを取得できなくなりますが、既にYouTubeへ投稿した動画やローカル監査記録は自動削除されません。</p>
+    </section>
+
+    <section>
+      <h2>7. Google API Services User Data Policy</h2>
+      <p>Google APIから受け取る情報の利用は、<a href="https://developers.google.com/terms/api-services-user-data-policy" rel="noopener noreferrer">Google API Services User Data Policy</a>（Limited Use要件を含む）に従い、上記のユーザー向け機能を提供・改善する目的に限定します。</p>
+    </section>
+
+    <section>
+      <h2>8. 連絡先と変更</h2>
+      <p>問い合わせ、認可・保存情報の確認、削除依頼の連絡先: <a href="mailto:nagato.y.project@gmail.com">nagato.y.project@gmail.com</a></p>
+      <p>取扱い内容を変更する場合は、本ページの内容と最終更新日を先に更新します。</p>
+    </section>
+
+    <nav aria-label="関連文書">
+      <a href="index.html">ホーム</a>
+      <a href="terms.html">利用規約</a>
+    </nav>
+  </main>
+</body>
+</html>
